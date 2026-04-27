@@ -54,3 +54,6 @@ TestResult.xml
 nunit-*.xml
 /src/WeatherForecast/.vs
 *.user
+
+# UI
+node_modules/
