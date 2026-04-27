@@ -44,3 +44,7 @@ docker run -p 8080:8080 weather-forecast
 - **Nullable reference types** are enabled (`<Nullable>enable</Nullable>`).
 - **Implicit usings** are enabled — no need to add `using System;` etc. explicitly.
 - Target framework: **net8.0**.
+
+## Documentation
+
+- All documents (stories, plans, reviews, backlog items, comments) must be written in **English**.
