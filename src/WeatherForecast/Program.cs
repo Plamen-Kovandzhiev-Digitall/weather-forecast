@@ -1,13 +1,10 @@
 
-using WeatherForecast.Utilities;
-
 namespace WeatherForecast
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var result = StringShortener.ToReadableUniqueKey("����� �� �������� � ����������� �� ��������� �� ���������� �����������:Module for Receiving and Processing Electronic Identity Applications");
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddCors(options =>
