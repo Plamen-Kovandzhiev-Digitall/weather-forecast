@@ -42,19 +42,19 @@
 
 ## Traceability
 
-| REQ-ID | Phase |
-|--------|-------|
-| API-01 | Phase 1 |
-| API-02 | Phase 1 |
-| API-03 | Phase 1 |
-| API-04 | Phase 1 |
-| API-05 | Phase 1 |
-| API-06 | Phase 1 |
-| MAP-01 | Phase 2 |
-| MAP-02 | Phase 2 |
-| MAP-03 | Phase 2 |
-| MAP-04 | Phase 2 |
-| UI-01  | Phase 2 |
-| UI-02  | Phase 2 |
-| UI-03  | Phase 2 |
-| UI-04  | Phase 2 |
+| REQ-ID | Phase | Status |
+|--------|-------|--------|
+| API-01 | Phase 1 | Pending |
+| API-02 | Phase 1 | Pending |
+| API-03 | Phase 1 | Pending |
+| API-04 | Phase 1 | Pending |
+| API-05 | Phase 1 | Pending |
+| API-06 | Phase 1 | Pending |
+| MAP-01 | Phase 2 | Pending |
+| MAP-02 | Phase 2 | Pending |
+| MAP-03 | Phase 2 | Pending |
+| MAP-04 | Phase 2 | Pending |
+| UI-01  | Phase 2 | Pending |
+| UI-02  | Phase 2 | Pending |
+| UI-03  | Phase 2 | Pending |
+| UI-04  | Phase 2 | Pending |
