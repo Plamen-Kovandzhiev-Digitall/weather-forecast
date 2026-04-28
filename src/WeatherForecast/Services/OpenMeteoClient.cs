@@ -36,6 +36,10 @@ public class OpenMeteoClient(
                     .ConfigureAwait(false);
                 return result ?? [];
             }
+            catch (OperationCanceledException)
+            {
+                throw;   // Honour cancellation immediately — not a retriable failure
+            }
             catch (Exception ex)
             {
                 // D-03: log at each retry attempt
