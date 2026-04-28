@@ -26,10 +26,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Returned `temperatureC` values are real current temperatures (not mock/random data) sourced from Open-Meteo's bulk API in a single HTTP request
   3. Repeated calls within 10 minutes return the cached result; a call after the TTL expires triggers a fresh Open-Meteo fetch
   4. A `fetch('http://localhost:5055/api/cities/temperatures')` from the Vite dev server at `http://localhost:5173` succeeds — no CORS error and no HTTPS redirect loop in browser DevTools
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Foundation: static city data (BulgarianCities.cs), CityTemperature DTO, OpenMeteoResponse model
+- [ ] 01-02-PLAN.md — Service layer: OpenMeteoClient (HTTP + retry) + CityTemperatureService (IMemoryCache + zip join)
+- [ ] 01-03-PLAN.md — Controller + wiring: CitiesController, Program.cs DI registrations, UseHttpsRedirection guard, delete old controller
 
 ### Phase 2: Frontend Map
 **Goal**: Users can see current temperatures for all 28 Bulgarian district cities on a full-viewport interactive Leaflet map — with color-coded markers, city name tooltips, loading/error states, and zero distracting chrome
