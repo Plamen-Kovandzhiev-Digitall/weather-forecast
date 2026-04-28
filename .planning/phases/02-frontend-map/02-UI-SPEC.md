@@ -57,12 +57,12 @@ Declared values (multiples of 4 only):
 |------|------|--------|-------------|-------|
 | Badge label | 13px (`text-[13px]`) | 700 (`font-bold`) | 1 (tight, single-line) | Temperature value inside `L.divIcon` badge |
 | Tooltip | 12px (`text-xs`) | 400 (`font-normal`) | 1.4 | City name in Leaflet `<Tooltip>` |
-| Error heading | 18px (`text-lg`) | 600 (`font-semibold`) | 1.3 | Error card title |
+| Error heading | 18px (`text-lg`) | 700 (`font-bold`) | 1.3 | Error card title |
 | Error body | 14px (`text-sm`) | 400 (`font-normal`) | 1.5 | Error card description + button label |
 
 **Constraints:**
 - 4 type sizes declared (13, 12, 18, 14 px → maps to Tailwind: `text-[13px]`, `text-xs`, `text-lg`, `text-sm`)
-- 2 font weights only: `font-normal` (400) and `font-bold` (700), with `font-semibold` (600) on error heading only
+- 2 font weights: `font-normal` (400) and `font-bold` (700)
 - No heading above 18px — there is no header/title chrome (D-03)
 - All badge text is single-line, non-wrapping (`whitespace-nowrap`)
 - System font stack — no `@font-face`, no Google Fonts import
@@ -113,6 +113,8 @@ Accent `#2563eb` reserved for: **retry button background only** — no other int
 ## Component Specifications
 
 ### 1. MapContainer (D-03, D-05, D-06)
+
+> **Primary visual anchor:** temperature badge cluster over Bulgaria; the colour-coded badges are the first element the eye resolves against the neutral CartoDB Positron tile base.
 
 ```
 Position:  fixed or html/body/root at 100vw × 100vh
@@ -210,7 +212,7 @@ Card:
 
 Contents (top to bottom):
   1. Warning emoji:  text-3xl  →  ⚠️  (no icon library needed)
-  2. Heading:        text-lg font-semibold text-gray-900
+  2. Heading:        text-lg font-bold text-gray-900
   3. Body:           text-sm text-gray-600 leading-relaxed
   4. Retry button:   see §Copywriting
 ```
