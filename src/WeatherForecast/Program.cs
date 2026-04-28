@@ -24,6 +24,16 @@ namespace WeatherForecast
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddMemoryCache();
+            builder.Services.AddHttpClient("open-meteo", client =>
+            {
+                client.BaseAddress = new Uri("https://api.open-meteo.com");
+                client.Timeout = TimeSpan.FromSeconds(10);
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+            });
+            builder.Services.AddScoped<IOpenMeteoClient, OpenMeteoClient>();
+            builder.Services.AddScoped<ICityTemperatureService, CityTemperatureService>();
+
             var app = builder.Build();
 
             app.UseCors("AllowReactDev");
@@ -35,7 +45,11 @@ namespace WeatherForecast
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
+            // PITFALLS #4: guard HTTPS redirect to avoid redirect loop in Docker/dev reverse proxy
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseHttpsRedirection();
+            }
 
             app.UseAuthorization();
 
