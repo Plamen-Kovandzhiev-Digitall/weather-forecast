@@ -12,7 +12,7 @@ Two-phase build that mirrors the natural dependency boundary of the project: sta
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Backend API** - ASP.NET Core proxy endpoint returning live temperatures for all 28 Bulgarian district cities
+- [x] **Phase 1: Backend API** - ASP.NET Core proxy endpoint returning live temperatures for all 28 Bulgarian district cities
 - [ ] **Phase 2: Frontend Map** - React SPA full-rewrite: full-viewport Leaflet map with 28 color-coded temperature markers
 
 ## Phase Details
@@ -56,5 +56,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Backend API | 0/? | Not started | - |
+| 1. Backend API | 3/3 | ✅ Complete | 2026-04-28 |
 | 2. Frontend Map | 0/? | Not started | - |
