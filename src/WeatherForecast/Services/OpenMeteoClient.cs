@@ -1,5 +1,7 @@
 namespace WeatherForecast;
 
+using System.Globalization;
+
 /// <summary>
 /// Wraps Open-Meteo's bulk forecast API endpoint.
 /// Sends a single HTTP request for all 28 cities using comma-separated coordinate lists.
@@ -15,8 +17,8 @@ public class OpenMeteoClient(
         CancellationToken cancellationToken = default)
     {
         // Build single bulk URL — comma-separated lat/lon in same order as cities list
-        var lats = string.Join(",", cities.Select(c => c.Latitude));
-        var lons = string.Join(",", cities.Select(c => c.Longitude));
+        var lats = string.Join(",", cities.Select(c => c.Latitude.ToString(CultureInfo.InvariantCulture)));
+        var lons = string.Join(",", cities.Select(c => c.Longitude.ToString(CultureInfo.InvariantCulture)));
         // PITFALLS #2: use current=temperature_2m NOT current_weather=true
         var url = $"/v1/forecast?latitude={lats}&longitude={lons}&current=temperature_2m&forecast_days=1";
 
