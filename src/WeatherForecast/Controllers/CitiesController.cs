@@ -30,6 +30,11 @@ public class CitiesController(
                 .ConfigureAwait(false);
             return Ok(temperatures);
         }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            // Client disconnected — not an error; return 499 (client closed request)
+            return StatusCode(499);
+        }
         catch (Exception ex)
         {
             // D-02: structured 503 on upstream failure after all retries exhausted
