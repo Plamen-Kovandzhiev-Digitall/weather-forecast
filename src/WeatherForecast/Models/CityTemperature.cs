@@ -18,6 +18,6 @@ public class CityTemperature
     /// <summary>WGS84 longitude in decimal degrees.</summary>
     public double Longitude { get; set; }
 
-    /// <summary>Current temperature in degrees Celsius from Open-Meteo. May be NaN if Open-Meteo omitted this city.</summary>
-    public double TemperatureC { get; set; }
+    /// <summary>Current temperature in degrees Celsius from Open-Meteo. Null if Open-Meteo omitted this city.</summary>
+    public double? TemperatureC { get; set; }
 }

@@ -44,8 +44,8 @@ public class CityTemperatureService(
                 NameEn       = city.NameEn,
                 Latitude     = city.Latitude,
                 Longitude    = city.Longitude,
-                // PITFALLS #10: null-safe access — Current is nullable
-                TemperatureC = r.Current?.Temperature2M ?? double.NaN,
+                // PITFALLS #10: null-safe access — Current is nullable; null when Current is absent
+                TemperatureC = r.Current?.Temperature2M,
             })
             .ToList()
             .AsReadOnly();
