@@ -6,6 +6,7 @@ import type { CityTemperature } from '../types/cityTemperature';
 // NOTE: 'leaflet/dist/leaflet.css' is imported in BulgariaMap.tsx — do NOT import it here
 
 function getTempColorClass(temp: number): string {
+  if (isNaN(temp)) return 'bg-gray-400';   // no-data colour — explicit gray instead of falling through to red
   if (temp <= 0)  return 'bg-blue-500';   // ≤0°C  (D-09)
   if (temp <= 15) return 'bg-teal-500';   // 1–15°C (D-09)
   if (temp <= 25) return 'bg-green-500';  // 16–25°C (D-09)
