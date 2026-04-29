@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-04-27)
 ## Current Position
 
 Phase: 2 of 2 (Frontend Map)
-Plan: 0 of ? in current phase
-Status: Ready to plan
-Last activity: 2026-04-28 — Phase 1 complete; UAT passed (7/7); ready for Phase 2 planning
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-04-28 — Phase 2 Plan 01 complete; Tailwind v4 toolchain migration done
 
 Progress: [██████████] 50%
 
@@ -42,10 +42,8 @@ Progress: [██████████] 50%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Open-Meteo chosen as weather source — free, no API key, bulk coordinate support
-- ASP.NET Core proxy pattern — frontend never calls Open-Meteo directly; all external calls go through backend
-- City coordinates owned by backend (`BulgarianCities.cs`) — returned in API response so frontend needs no coordinate list
-- Full frontend rewrite — existing `src/weather-ui/` files are incompatible with new API shape; delete and rewrite, do not patch
+- Tailwind v4 Vite-native plugin chosen over PostCSS pipeline (D-02) — toolchain migration in Plan 02-01
+- @tailwindcss/vite must be installed with --save-dev (npm defaults new packages to dependencies, not devDependencies)
 
 ### Pending Todos
 
@@ -64,6 +62,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-27
-Stopped at: Phase 1 complete — UAT passed (7/7); next step is `/gsd-plan-phase 2`
+Last session: 2026-04-28
+Stopped at: Phase 2 Plan 01 complete — Tailwind v4 migration done; next step is 02-02-PLAN.md
 Resume file: None
