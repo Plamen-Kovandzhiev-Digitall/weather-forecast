@@ -16,10 +16,14 @@ function getTempColorClass(temp: number): string {
 
 function createTempIcon(temp: number): L.DivIcon {
   const colorClass = getTempColorClass(temp);
-  const label = isNaN(temp) ? '—' : `${temp}°C`;  // null/NaN guard (UI-SPEC data contract)
+  const label = isNaN(temp) ? '—' : `${temp}°C`;
+  // Build DOM node so no string-to-HTML path exists (eliminates XSS surface if city name ever added)
+  const el = document.createElement('div');
+  el.className = `${colorClass} text-white text-[13px] font-bold px-2 py-1 rounded shadow-md whitespace-nowrap leading-none select-none`;
+  el.textContent = label;  // textContent is XSS-safe by definition
   return L.divIcon({
     className: '',  // D-07: CRITICAL — clears leaflet-div-icon default white box so Tailwind controls all styling
-    html: `<div class="${colorClass} text-white text-[13px] font-bold px-2 py-1 rounded shadow-md whitespace-nowrap leading-none select-none">${label}</div>`,
+    html: el,       // L.divIcon accepts HTMLElement directly
     iconSize:   [52, 28],  // UI-SPEC §2: bounding box for hit-test and centering
     iconAnchor: [26, 14], // UI-SPEC §2: center of badge = exact city coordinate (half of iconSize)
   });
