@@ -43,11 +43,14 @@ Plans:
   3. Hovering over any marker shows the city name as a tooltip
   4. While the API call is in flight, a loading indicator is visible; if the backend request fails, a clear error message is shown instead of a broken map
   5. The map is the only major element on screen — no sidebars, panels, or decorative UI that competes with the map for attention
-**Plans**: TBD
+**Plans**: 4 plans
 **UI hint**: yes
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md — Toolchain migration: Tailwind v4 upgrade, delete obsolete files, wire /api proxy
+- [ ] 02-02-PLAN.md — Type + Hook: CityTemperature interface + useCityTemperatures hook with retry
+- [ ] 02-03-PLAN.md — Map components: CityMarker (memoized divIcon + color coding) + BulgariaMap (MapContainer + tiles)
+- [ ] 02-04-PLAN.md — App assembly: rewrite App.tsx with loading/error overlays + human visual verify
 
 ## Progress
 
