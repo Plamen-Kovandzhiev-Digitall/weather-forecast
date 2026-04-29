@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/weathermap.tsx","./src/components/weatherpopup.tsx","./src/hooks/useweatherdata.ts","./src/types/weather.ts"],"version":"5.8.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/bulgariamap.tsx","./src/components/citymarker.tsx","./src/components/maperrorboundary.tsx","./src/hooks/usecitytemperatures.ts","./src/types/citytemperature.ts"],"version":"5.8.3"}
