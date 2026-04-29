@@ -3,5 +3,5 @@ export interface CityTemperature {
   nameEn:       string;   // English city name e.g. "Sofia"
   latitude:     number;
   longitude:    number;
-  temperatureC: number;   // backend returns double? — handle null/NaN at render time, not here
+  temperatureC: number | null;   // backend double? can be null when no reading available
 }
