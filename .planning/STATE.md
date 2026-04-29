@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-04-27)
 ## Current Position
 
 Phase: 2 of 2 (Frontend Map)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-04-29 — Phase 2 Plan 02 complete; CityTemperature interface and useCityTemperatures hook created
+Last activity: 2026-04-29 — Phase 2 Plan 03 complete; CityMarker and BulgariaMap components created
 
-Progress: [██████████] 50%
+Progress: [████████████] 62%
 
 ## Performance Metrics
 
@@ -44,6 +44,9 @@ Recent decisions affecting current work:
 
 - Tailwind v4 Vite-native plugin chosen over PostCSS pipeline (D-02) — toolchain migration in Plan 02-01
 - @tailwindcss/vite must be installed with --save-dev (npm defaults new packages to dependencies, not devDependencies)
+- className:'' on L.divIcon is non-negotiable (D-07) — Leaflet's default CSS overrides Tailwind badge styling without it
+- useMemo([roundedTemp]) per CityMarker prevents 28-marker flicker on every parent re-render (PITFALL §6)
+- MapContainer center/zoom are module-level constants — immutable after mount (PITFALL §7)
 
 ### Pending Todos
 
@@ -63,5 +66,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-28
-Stopped at: Phase 2 Plan 02 complete — CityTemperature interface and useCityTemperatures hook done; next step is 02-03-PLAN.md
+Stopped at: Phase 2 Plan 03 complete — CityMarker and BulgariaMap components done; next step is 02-04-PLAN.md
 Resume file: None

@@ -49,7 +49,7 @@ Plans:
 Plans:
 - [x] 02-01-PLAN.md — Toolchain migration: Tailwind v4 upgrade, delete obsolete files, wire /api proxy
 - [x] 02-02-PLAN.md — Type + Hook: CityTemperature interface + useCityTemperatures hook with retry
-- [ ] 02-03-PLAN.md — Map components: CityMarker (memoized divIcon + color coding) + BulgariaMap (MapContainer + tiles)
+- [x] 02-03-PLAN.md — Map components: CityMarker (memoized divIcon + color coding) + BulgariaMap (MapContainer + tiles)
 - [ ] 02-04-PLAN.md — App assembly: rewrite App.tsx with loading/error overlays + human visual verify
 
 ## Progress
@@ -60,4 +60,4 @@ Phases execute in numeric order: 1 → 2
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Backend API | 3/3 | ✅ Complete | 2026-04-28 |
-| 2. Frontend Map | 2/4 | In progress | - |
+| 2. Frontend Map | 3/4 | In progress | - |
