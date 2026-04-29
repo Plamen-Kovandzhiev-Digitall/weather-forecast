@@ -13,7 +13,7 @@ Two-phase build that mirrors the natural dependency boundary of the project: sta
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Backend API** - ASP.NET Core proxy endpoint returning live temperatures for all 28 Bulgarian district cities
-- [ ] **Phase 2: Frontend Map** - React SPA full-rewrite: full-viewport Leaflet map with 28 color-coded temperature markers
+- [x] **Phase 2: Frontend Map** - React SPA full-rewrite: full-viewport Leaflet map with 28 color-coded temperature markers
 
 ## Phase Details
 
@@ -50,7 +50,7 @@ Plans:
 - [x] 02-01-PLAN.md — Toolchain migration: Tailwind v4 upgrade, delete obsolete files, wire /api proxy
 - [x] 02-02-PLAN.md — Type + Hook: CityTemperature interface + useCityTemperatures hook with retry
 - [x] 02-03-PLAN.md — Map components: CityMarker (memoized divIcon + color coding) + BulgariaMap (MapContainer + tiles)
-- [ ] 02-04-PLAN.md — App assembly: rewrite App.tsx with loading/error overlays + human visual verify
+- [x] 02-04-PLAN.md — App assembly: rewrite App.tsx with loading/error overlays + human visual verify
 
 ## Progress
 
@@ -60,4 +60,4 @@ Phases execute in numeric order: 1 → 2
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Backend API | 3/3 | ✅ Complete | 2026-04-28 |
-| 2. Frontend Map | 3/4 | In progress | - |
+| 2. Frontend Map | 4/4 | ✅ Complete | 2026-04-29 |

@@ -13,17 +13,17 @@
 
 ### Map / Markers
 
-- [ ] **MAP-01**: User sees an interactive Leaflet map centered on Bulgaria (`[42.7, 25.5]`, zoom 7) with CartoDB Positron tiles (clean, minimal tile style)
-- [ ] **MAP-02**: User sees 28 markers on the map — one per district city — each displaying the current temperature in °C using a custom `L.divIcon` HTML badge (memoized to prevent flicker)
-- [ ] **MAP-03**: Each marker badge is color-coded by temperature range (e.g., ≤0°C blue, 1–15°C teal, 16–25°C green, 26–35°C orange, >35°C red)
-- [ ] **MAP-04**: User sees the city name when hovering over any marker (Leaflet `<Tooltip>` component)
+- [x] **MAP-01**: User sees an interactive Leaflet map centered on Bulgaria (`[42.7, 25.5]`, zoom 7) with CartoDB Positron tiles (clean, minimal tile style)
+- [x] **MAP-02**: User sees 28 markers on the map — one per district city — each displaying the current temperature in °C using a custom `L.divIcon` HTML badge (memoized to prevent flicker)
+- [x] **MAP-03**: Each marker badge is color-coded by temperature range (e.g., ≤0°C blue, 1–15°C teal, 16–25°C green, 26–35°C orange, >35°C red)
+- [x] **MAP-04**: User sees the city name when hovering over any marker (Leaflet `<Tooltip>` component)
 
 ### Frontend / UX
 
-- [ ] **UI-01**: React 19 SPA project at `src/weather-ui/` (Vite + TypeScript + Tailwind CSS + react-leaflet) starts with `npm run dev` on `http://localhost:5173`
-- [ ] **UI-02**: User sees a loading indicator while temperature data is being fetched from the backend
-- [ ] **UI-03**: User sees a clear error message if the backend request fails
-- [ ] **UI-04**: The map occupies the full viewport as the hero element — minimal chrome, no sidebars or distracting UI elements
+- [x] **UI-01**: React 19 SPA project at `src/weather-ui/` (Vite + TypeScript + Tailwind CSS + react-leaflet) starts with `npm run dev` on `http://localhost:5173`
+- [x] **UI-02**: User sees a loading indicator while temperature data is being fetched from the backend
+- [x] **UI-03**: User sees a clear error message if the backend request fails
+- [x] **UI-04**: The map occupies the full viewport as the hero element — minimal chrome, no sidebars or distracting UI elements
 
 ## v2 Requirements (deferred)
 
@@ -50,11 +50,11 @@
 | API-04 | Phase 1 | Pending |
 | API-05 | Phase 1 | Pending |
 | API-06 | Phase 1 | Pending |
-| MAP-01 | Phase 2 | Pending |
-| MAP-02 | Phase 2 | Pending |
-| MAP-03 | Phase 2 | Pending |
-| MAP-04 | Phase 2 | Pending |
-| UI-01  | Phase 2 | Pending |
-| UI-02  | Phase 2 | Pending |
-| UI-03  | Phase 2 | Pending |
-| UI-04  | Phase 2 | Pending |
+| MAP-01 | Phase 2 | ✅ Complete |
+| MAP-02 | Phase 2 | ✅ Complete |
+| MAP-03 | Phase 2 | ✅ Complete |
+| MAP-04 | Phase 2 | ✅ Complete |
+| UI-01  | Phase 2 | ✅ Complete |
+| UI-02  | Phase 2 | ✅ Complete |
+| UI-03  | Phase 2 | ✅ Complete |
+| UI-04  | Phase 2 | ✅ Complete |
