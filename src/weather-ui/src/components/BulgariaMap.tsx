@@ -26,8 +26,9 @@ interface BulgariaMapProps {
 
 export function BulgariaMap({ cities }: BulgariaMapProps) {
   return (
-    // D-03: full-viewport wrapper; aria-label identifies the map for screen readers (UI-SPEC accessibility)
+    // D-03: full-viewport wrapper; role="region" + aria-label identifies the map for screen readers (UI-SPEC accessibility)
     <div
+      role="region"
       className="h-screen w-screen"
       aria-label="Bulgaria weather map showing current temperatures for 28 district cities"
     >
