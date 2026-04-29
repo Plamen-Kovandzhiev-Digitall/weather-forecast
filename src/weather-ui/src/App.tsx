@@ -1,5 +1,6 @@
 import { useCityTemperatures } from './hooks/useCityTemperatures';
 import { BulgariaMap } from './components/BulgariaMap';
+import { MapErrorBoundary } from './components/MapErrorBoundary';
 // No App.css import — D-04 deleted App.css; all styles via Tailwind v4 utilities in index.css
 
 export default function App() {
@@ -11,7 +12,9 @@ export default function App() {
     <div className="relative w-screen h-screen overflow-hidden">
 
       {/* MAP: always rendered so tiles start loading immediately — visible beneath any overlay (D-11) */}
-      <BulgariaMap cities={data} />
+      <MapErrorBoundary>
+        <BulgariaMap cities={data} />
+      </MapErrorBoundary>
 
       {/* LOADING OVERLAY: absolute inset-0, z-[1000] — above all Leaflet layers (D-11, D-13) */}
       {loading && (
